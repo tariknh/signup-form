@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.noBorder{
+    border: none;
+}
 h1{
     font-family: 'Quicksand', sans-serif;
     color: white;
@@ -10,14 +18,19 @@ body{
     flex: 1;
     background-color: red;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     background: url(space.jpeg);
     background-size: cover;
-    background-position: center
+    background-position: bottom;
 }
 .rightHero{
     flex: 2;
-    background-color: #ffff;
+    background-color: #dff6ff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
 }
 .fullVH{
     height: 100vh;
@@ -26,11 +39,11 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgba(100, 100, 100, 0.5);
+    background-color: #dff6ff3b;
     height: 5rem;
     align-items: center;
-    margin-bottom: 11rem;
     gap: 0.5em;
+    margin-top: 5rem;
 }
 .logo{
     width: 3em;
@@ -39,8 +52,75 @@ body{
 .leftImage{
     height: 100vh;
 }
-form{
-    height: 30vh;
+.banner{
+    height: auto;
     width: 100%;
+    padding: 2em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-image: linear-gradient(to left bottom, #dff6ff, #c3ebfd, #a8e0fd, #8cd4fd, #70c7fe, #5db4ed, #4aa1db, #358fca, #2873a4, #1c5980, #10405d, #06283d);
+}
+.inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 1rem;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    width: 60%;
+}
+input{
+    width: 100%;
+    padding: 0.4rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: helvetica;
+    box-shadow: inset rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+label{
+    font-size: 0.6rem;
+    color: white;
+    font-family: Quicksand;
+    flex: 0;
+    width: 100%;
+    letter-spacing: 0.05rem;
+}
+#create{
+    margin: 2rem;
+    width: 10rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    color:#dff6ff;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: Quicksand;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: #358fca;
+    cursor: pointer;
+}
+span{
+    width: 100%;
+    margin-left: 2rem;
+    font-family: Quicksand;
+}
+a{
+    text-decoration: none;
+    color: #2873a4;
+    font-weight: 700;
+}
+.intro{
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+input:valid{
+    border: 1.5px solid rgb(0, 255, 0);
+}
+input:invalid{
+    border: 1.5px solid rgb(255, 0, 0);
+}
+.match{
+    font-size: 0.8rem;
+    color: red;
+    display: none;
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
     <title>Astronaut Sign-Up Form</title>
 </head>
 <body>
@@ -15,9 +16,43 @@
         </div>
     </section>
     <section class="rightHero fullVH">
-        <form action="" method="post">
-            <h1>hey</h1>
-        </form>
+        <span class="intro">This won't quite make you an astronaut.<br>You might have a bigger chance
+            by making your own rocket ship!<br><br>But hey, <i>anything</i>  can happen, so why not make an account!
+        </span>
+        <section class="banner">
+            <form id="form"action="" method="post">
+                <h1>Lets become an Astronaut!</h1>
+                <div class="inputs">
+                    <div class="input-group span-2">
+                        <label for="firstName">FIRST NAME</label>
+                        <input required placeholder="John" minlength="3" pattern="[a-zA-Z]*" type="text" name="firstname" id="firstName">
+                    </div>
+                    <div class="input-group span-2">
+                        <label for="lastName">LAST NAME</label>
+                        <input required placeholder="Appleseed" minlength="3" pattern="[a-zA-Z]*" type="text" name="lastname" id="lastName">
+                    </div>
+                    <div class="input-group span-2">
+                        <label for="email">EMAIL</label>
+                        <input required placeholder="John@Appleseed.com" type="email" name="email" id="email">
+                    </div>
+                    <div class="input-group span-2">
+                        <label for="tel">PHONE NUMBER</label>
+                        <input required placeholder="12345678" pattern="\d*"type="tel" name="tel" id="tel">
+                    </div>
+                    <div class="input-group span-2">
+                        <label for="password">PASSWORD</label>
+                        <input required minlength="5"title="Please enter a password longer than 5 characters"type="password" name="password" id="password">
+                    </div>
+                    <div class="input-group span-2">
+                        <label for="confirm">CONFIRM PASSWORD</label>
+                        <input required type="password" name="confirm" id="confirm">
+                    </div>
+                    <h1 id="nomatch"class="match">Passwords Dont Match!</h1>
+                </div>
+            </form>
+        </section>
+        <button id="create"form="form"type="submit">Create Account</button>
+        <span>Already have an account? <a href="">Log in</a></span>
     </section>
 </body>
 </html>
